@@ -5,8 +5,8 @@
 		JSP
 
 
-Projeto de cadastro de produt com controle de usuário. Podendo o Administrador criar um novo usuário e inserir novos produtos.
-O usuário também vai poder inserir novos produtos, consultar quantos produtos tem em estoque.
+Projeto de cadastro de produto com controle de usuário. Podendo o Administrador criar um novo usuário e inserir novos produtos.
+O usuário também pode inserir novos produtos e consultar quantos produtos tem em estoque.
 
 
 	Necessário para utilização do projeto:
