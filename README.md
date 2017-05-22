@@ -2,7 +2,7 @@
 
 	Cadastro de produto
 		Servlet
-			JSP
+		JSP
 
 
 Projeto de cadastro de produt com controle de usuário. Podendo o Administrador criar um novo usuário e inserir novos produtos.
