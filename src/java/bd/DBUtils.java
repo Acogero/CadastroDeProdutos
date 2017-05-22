@@ -16,6 +16,32 @@ import java.sql.SQLException;
  */
 public class DBUtils {
     
+    //MÉTODO PARA CRIAR A BASE DE DADOS
+        public static void createSchema(){
+            Connection con = null;
+            Statement stmt = null;
+            try{
+                con = ConnectionFactory.getConexao();
+                con.setAutoCommit(false);
+                stmt = (Statement) con.createStatement();
+                stmt.execute("CREATE DATABASE IF NOT EXISTS crudProdutos;");
+                
+                con.commit();
+            }catch(Exception e){
+                e.printStackTrace();
+                try{
+                    con.rollback();
+                }catch(SQLException sqlex){
+                }
+            }finally{
+                try{
+                    con.close();
+                }catch(SQLException ex){
+                }
+            }
+        }
+    //---------------------------------
+        
     //método para criar as tabelas de Usuário e produto
         public static void createTable() throws ClassNotFoundException{
             Connection con = null;
@@ -48,4 +74,30 @@ public class DBUtils {
             }
         }
     //-------------------------------------------------
+        
+    //EXCLUIR TABELA
+        public static void dropTable(){
+            Connection con = null;
+            Statement stmt = null;
+            try{
+                con = ConnectionFactory.getConnection();
+                con.setAutoCommit(false);
+                stmt = (Statement) con.createStatement();
+                stmt.execute("DROP TABLE crudProdutos");
+                
+                con.commit();
+            }catch(Exception e){
+                e.printStackTrace();
+                try{
+                    con.rollback();
+                }catch(SQLException ex){
+                }
+            }finally{
+                try{
+                    con.close();
+                }catch(SQLException es){
+                }
+            }
+        }
+    //--------------------------------------------------
 }
