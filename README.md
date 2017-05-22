@@ -1,8 +1,8 @@
 # CadastroDeProdutos
 
 	Cadastro de produto
-		JSP
-	  Servlet
+		Servlet
+			JSP
 
 
 Projeto de cadastro de produt com controle de usuário. Podendo o Administrador criar um novo usuário e inserir novos produtos.
@@ -27,5 +27,5 @@ O usuário também vai poder inserir novos produtos, consultar quantos produtos 
 
 
 
-Marcos Vinicius A. Moreira
-Formando em Análise e Desenvolvimento de Sistemas
+		Marcos Vinicius A. Moreira
+		Formando em Análise e Desenvolvimento de Sistemas
