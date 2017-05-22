@@ -4,6 +4,11 @@ Cadastro de produto
 		JSP
 	  Servlet
 
+
+	Projeto de cadastro de produt com controle de usuário. Podendo o Administrador criar um novo usuário e inserir novos produtos.
+O usuário também vai poder inserir novos produtos, consultar quantos produtos tem em estoque.
+
+
 Necessário para utilização do projeto:
 	•	NetBeans 8.0+
 	•	MySQL
