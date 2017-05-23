@@ -18,7 +18,7 @@ public class ConnectionFactory {
     
     //Conexão com o banco de dados
         private static final String urlBD = "jdbc:mysql://localhost:3306/"; // link de conexão com o banco
-        private static final String BD = "crudProduto"; //nome do schema
+        private static final String BD = "crudProdutos"; //nome do schema
         private static final String userBD = "root"; //nome de usuário
         private static final String passBD = "root"; //senha do usuário
         private static final String driver = "com.mysql.jdbc.Driver"; // Driver do mysql

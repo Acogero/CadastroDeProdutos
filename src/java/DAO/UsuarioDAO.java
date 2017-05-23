@@ -93,4 +93,32 @@ public class UsuarioDAO extends Usuario implements IUsuario{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+    public boolean existe(Usuario u){
+        try{
+            sql = "SELECT * FROM usuario WHERE nome = ? AND senha = ?;";
+            con = ConnectionFactory.getConnection();
+            ps = (PreparedStatement) con.prepareStatement(sql);
+            
+            ps.setString(1, u.getNome());
+            ps.setString(2, u.getSenha());
+            
+            rs = ps.executeQuery();
+            
+            if(rs.next()){
+                u.setIdUsuario(rs.getInt("idUsuario"));
+                u.setNome(rs.getString("nome"));
+                u.setEmail(rs.getString("email"));
+                
+                return true;
+            }
+        }catch(Exception e){
+            return false;
+        }finally{
+            try{
+                getConnection().close();
+            }catch(Exception ex){
+            }
+        }
+        return false;
+    }
 }

@@ -1,6 +1,6 @@
 <%-- 
-    Document   : Página de login
-    Created on : 22/05/2017, 13:26:47
+    Document   : Página de cadastro de Usuário
+    Created on : 22/05/2017, 16:27:33
     Author     : Marcos Vinicius A. Moreira
     E-mail     : louis.seipher@gmail.com
 --%>
@@ -52,20 +52,17 @@
                         <form role="form" method="POST" action="ControleUsuario">
                             <fieldset>
                                 <div class="form-group">
+                                    <input class="form-control" placeholder="Nome" name="nome" type="nome" autofocus>
+                                </div>
+                                <div class="form-group">
                                     <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Senha" name="password" type="password" value="">
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input name="remember" type="checkbox" value="Remember Me">Lembrar-me
-                                    </label>
+                                    <input class="form-control" placeholder="Senha" name="senha" type="password">
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
-                                <input type="submit" class="btn btn-lg btn-success btn-block" value="Login"/>
-                                <input type="hidden" name="acao" value="Logar"/>
-                                <a href="cadastrarUsuario.jsp" class="btn btn-lg btn-primary btn-block" >Novo usuário</a>
+                                <input type="hidden" name="acao" value="Cadastrar"/>
+                                <input type="submit" class="btn btn-lg btn-success btn-block" value="Cadastrar"/>
                             </fieldset>
                         </form>
                     </div>

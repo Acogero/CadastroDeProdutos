@@ -51,9 +51,7 @@ public class DBUtils {
                 con = ConnectionFactory.getConnection();
                 con.setAutoCommit(false);
                 stmt = (Statement) con.createStatement();
-                stmt.execute("CREATE TABLE IF NOT EXISTS usuario("
-                        + "idUsuario int AUTO_INCREMENT, nome VARCHAR(70) NOT NULL, "
-                        + "email VARCHAR(150), senha VARCHAR(25) NOT NULL, PRIMARY KEY (idUsuario));");
+                stmt.execute("CREATE TABLE IF NOT EXISTS usuario(idUsuario INT NOT NULL AUTO_INCREMENT, nome VARCHAR(70) NOT NULL, email VARCHAR(150) NOT NULL, senha VARCHAR(25) NOT NULL, PRIMARY KEY (idUsuario))");
                 
                 stmt.execute("CREATE TABLE IF NOT EXISTS produto("
                         + "idProduto int AUTO_INCREMENT, nome VARCHAR(150) NOT NULL, "
