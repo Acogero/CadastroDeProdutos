@@ -37,12 +37,21 @@
                 <a class="navbar-brand" href="#">Cadastro de Produtos</a>
             </div>
             
-            <ul class="nav nabar-nav">
+            <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a>
+                <li><a href="#">Page 1</a>
+                <li><a href="#">Page 2</a>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
                 <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>Sair</a></li>
             </ul>
         </div>
     </nav>
+    
+    <!-- TO DO-->
+    
+    
+    
     <!-- Bootstrap Core JavaScript -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
