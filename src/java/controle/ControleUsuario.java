@@ -31,16 +31,16 @@ public class ControleUsuario extends HttpServlet {
         UsuarioDAO dao = new UsuarioDAO();
         String acao = request.getParameter("acao");
         
-        if(acao.equals("Logar")){
-            if(request.getParameter("usuario") != null && request.getParameter("senha") != null){
-                user.setNome(request.getParameter("usuario"));
-                user.setSenha(request.getParameter("senha"));
+        if(acao.equals("Logar") || acao.equals("Login")){
+            if(request.getParameter("email") != null && request.getParameter("password") != null){
+                user.setEmail(request.getParameter("email"));
+                user.setSenha(request.getParameter("password"));
                 
                 try{
                     if(dao.existe(user)){
                         //SESSÃO
                             HttpSession session = request.getSession();
-                            session.setAttribute("nome", request.getParameter("nome"));
+                            session.setAttribute("email", request.getParameter("email"));
                         //----------
                         
                         response.sendRedirect("index.jsp");

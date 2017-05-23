@@ -31,7 +31,7 @@ public class UsuarioDAO extends Usuario implements IUsuario{
     @Override
     public boolean create(Usuario u) {
         try{
-            sql = "INSERT INT usuario (nome, email, senha) VALUES (?, ?, ?);";
+            sql = "INSERT INTO usuario (nome, email, senha) VALUES (?, ?, ?);";
             con = getConnection();
             ps = (PreparedStatement) con.prepareStatement(sql);
             
@@ -95,11 +95,11 @@ public class UsuarioDAO extends Usuario implements IUsuario{
     
     public boolean existe(Usuario u){
         try{
-            sql = "SELECT * FROM usuario WHERE nome = ? AND senha = ?;";
+            sql = "SELECT * FROM usuario WHERE email = ? AND senha = ?;";
             con = ConnectionFactory.getConnection();
             ps = (PreparedStatement) con.prepareStatement(sql);
             
-            ps.setString(1, u.getNome());
+            ps.setString(1, u.getEmail());
             ps.setString(2, u.getSenha());
             
             rs = ps.executeQuery();
