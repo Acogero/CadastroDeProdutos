@@ -12,7 +12,7 @@
 <% 
     IProduto dao = new ProdutoDAO();
     Produto p = new Produto();
-    List<Produto> listaProdutos = dao.read(p);
+    List<Produto> listaProdutos = dao.read();
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,24 +45,25 @@
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Cadastro de Produtos</a>
             </div>
-            
+            <!--
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a>
                 <li><a href="#">Page 1</a>
                 <li><a href="#">Page 2</a>
             </ul>
+            -->
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>Sair</a></li>
             </ul>
         </div>
     </nav>
     
-    <!-- DIREITA -->
+    <!-- ESQUERDA -->
     <div class="container-fluid">
         <div class="row content">
             <div class="col-sm-3">
                 <div class="panel-body">
-                    <form role="form" method="POST" action="ControleUsuario">
+                    <form role="form" method="POST" action="ControleProduto">
                         <fieldset>
                             <h3> Cadastro de Produto </h3>
                             <div class="form-group">
@@ -72,7 +73,7 @@
                                 <input class="form-control" placeholder="Quantidade" name="qtd" type="number" autofocus>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="Preço" name="preco" type="number" autofocus>
+                                <input type="text" class="form-control" placeholder="Preço" name="preco" autofocus>
                             </div>
                             <!-- Change this to a button or input when using this as a form -->
                             <input type="submit" class="btn btn-lg btn-success btn-block" value="Cadastrar"/>
@@ -83,16 +84,16 @@
                 </div>
             </div>
             
-            <!-- ESQUERDA -->
-            <div class="col-sm-9">
-                <h4><small>Todos os produtos</small></h4>
+            <!-- DIREITA -->
+            <div class="col-sm-4 well">
+                <h3><center>Todos os produtos</center></h3>
                 <% for(Produto j: listaProdutos){ %>
-                <tr>
-                    <td>Código: <%=j.getIdProduto()%></td></BR>
-                    <td>Nome: <%=j.getNome()%> </td></BR>
-                    <td>Preço:<%=j.getPreco()%></td></BR>
-                    <td>Quantidade: <%=j.getQuantidade()%></td></BR>
-                    <td>------------------------------------------</td></BR>
+                <tr>                    
+                    <td>Código: <%=j.getIdProduto()%></td><br>
+                    <td>Nome: <%=j.getNome()%> </td><br>
+                    <td>Quantidade: <%=j.getQuantidade()%></td><br>
+                    <td>Preço:<%=j.getPreco()%></td><br>
+                    <td>------------------------------------------</td><br>
                 <%}%>
                 </tr>
             </div>
@@ -101,8 +102,9 @@
     
     
     
-    <footer class="container-fluid">
-        <p>Footer Text</p>
+    <footer class="container-fluid well">
+        <p>Posted by: Acogero Vinicius</p>
+        <p>Contact information: <a href="mailto:louis.seipher@gmail.com">louis.seipher@gmail.com</a>.</p>
     </footer>
     
     <!-- Bootstrap Core JavaScript -->

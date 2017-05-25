@@ -17,7 +17,7 @@ import modelo.Produto;
 public interface IProduto {
     public boolean create(Produto p);
     
-    public List<Produto> read(Produto p) throws ServletException;
+    public List<Produto> read() throws ServletException;
     
     public boolean existe(Produto p);
     
