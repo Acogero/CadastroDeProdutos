@@ -6,6 +6,7 @@
 package DAO;
 
 import java.util.List;
+import javax.servlet.ServletException;
 import modelo.Produto;
 
 /**
@@ -16,7 +17,7 @@ import modelo.Produto;
 public interface IProduto {
     public boolean create(Produto p);
     
-    public List<Produto> read(Produto p);
+    public List<Produto> read(Produto p) throws ServletException;
     
     public boolean existe(Produto p);
     
