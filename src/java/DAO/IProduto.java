@@ -5,6 +5,7 @@
  */
 package DAO;
 
+import java.util.List;
 import modelo.Produto;
 
 /**
@@ -13,9 +14,9 @@ import modelo.Produto;
  * 1º Semestre de 2017
  */
 public interface IProduto {
-    public void create(Produto p);
+    public boolean create(Produto p);
     
-    public Produto read(Produto p);
+    public List<Produto> read(Produto p);
     
     public boolean existe(Produto p);
     
